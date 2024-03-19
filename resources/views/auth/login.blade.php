@@ -1,14 +1,3 @@
-@php
-    /**
-     * @author		Giacomo Piva <gpiva@innovativa.it>
-     * @category	Layout file
-     * @version    	1.0
-     * @see        	https://github.com/gurayyarar/AdminBSBMaterialDesign
-     * @see			https://gurayyarar.github.io/AdminBSBMaterialDesign/index.html
-     * @see 		https://getbootstrap.com/docs/3.3/
-     */
-@endphp
-
 <!DOCTYPE html>
 <html lang="{{ Str::replace('_', '-', app()->getLocale()) }}">
 
@@ -17,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
 
-    <title>Log In {{ config('app.name', 'Laravel') }}</title>
+    <title>Accedi - {{ config('app.name', 'Laravel') }}</title>
 
     <!-- Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
