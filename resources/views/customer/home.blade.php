@@ -22,7 +22,7 @@
             data() {
                 return {
                     title: '',
-                    smallTitle: 'Dashboard principale'
+                    smallTitle: ''
                 }
             },
 
@@ -32,7 +32,7 @@
 
             methods: {
                 startup: function() {
-                    this.title = "DASHBOARD";
+                    this.title = "";
                 },
             },
         }).mount('#app');

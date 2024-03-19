@@ -1,15 +1,16 @@
 <aside id="leftsidebar" class="sidebar">
     <div class="user-info">
         <div class="image">
-            <img src="/images/user.png" width="48" height="48" alt="User" />
+            <img src="/images/user.png" width="48" height="48" alt="User"
+                style="border-radius: 0px; box-shadow: 0px 2px 5px #dedede;" />
         </div>
         <div class="info-container">
             <div class="name" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Ciao <span class="name">{{ Auth::user()->name }}</span>! </div>
 
             <div class="email">
-                Email di accesso: <span class="name">{{ Auth::user()->email }} </span><br />
-                Il tuo ruolo è: <span class="role" id="role">{{ Auth::user()->getRoleName() }}</span></div>
+                Email: <span class="name">{{ Auth::user()->email }} </span><br />
+                {{-- Il tuo ruolo è: <span class="role" id="role">{{ Auth::user()->getRoleName() }}</span> --}}</div>
 
             <div class="btn-group user-helper-dropdown">
                 <i class="material-icons" data-toggle="dropdown" aria-haspopup="true"
@@ -22,11 +23,9 @@
     </div>
     <div class="menu">
         <ul class="list">
-            <li class="header">MENU PRINCIPALE</li>
-
-
             @role(['admin'])
-                <li>
+                <li
+                    class="{{ appSectionName(0) }} {{ appSectionName(1) }} {{ isSectionActive(['home'], 1) ? 'active' : '' }}">
                     <a href="{{ route('admin.home') }}">
                         <i class="material-icons">home</i>
                         <span>Home</span>
@@ -49,7 +48,8 @@
             @endrole
 
             @role(['customer'])
-                <li>
+                <li
+                    class="{{ appSectionName(0) }} {{ appSectionName(1) }} {{ isSectionActive(['home'], 1) ? 'active' : '' }}">
                     <a href="{{ route('customer.home') }}">
                         <i class="material-icons">home</i>
                         <span>Home</span>

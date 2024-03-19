@@ -79,6 +79,7 @@ class UserController extends AdminController
      * Store a newly created user in storage.
      *
      * @param  UserStoreRequest  $request  The validated user store request.
+     *
      * @return RedirectResponse A redirect response based on the user's role.
      */
     public function store(UserStoreRequest $request): RedirectResponse
@@ -102,6 +103,7 @@ class UserController extends AdminController
      * Show the form for editing the specified user.
      *
      * @param  User  $user  The user to edit.
+     *
      * @return View The view displaying the user edit form.
      */
     public function edit(User $user): View
@@ -117,6 +119,7 @@ class UserController extends AdminController
      *
      * @param  UserUpdateRequest  $request  The validated user update request.
      * @param  User  $user  The user to update.
+     *
      * @return RedirectResponse A redirect response to the user index.
      */
     public function update(UserUpdateRequest $request, User $user): RedirectResponse
@@ -138,6 +141,7 @@ class UserController extends AdminController
      * Remove the specified user from storage.
      *
      * @param  User  $user  The user to be removed.
+     *
      * @return JsonResponse A JSON response indicating the result of the user removal.
      */
     public function destroy(User $user): JsonResponse

@@ -13,6 +13,7 @@ class UserService
      * Store a new user in the database.
      *
      * @param  array<string, string>  $userData  An associative array containing user data.
+     *
      * @return User The created User model.
      */
     public function storeUser(array $userData): User

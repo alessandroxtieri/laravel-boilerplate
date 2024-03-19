@@ -18,7 +18,7 @@
                 data-target="#navbar-collapse" aria-expanded="false"></a>
             <a href="javascript:void(0);" class="bars"></a>
             <a class="navbar-brand" href="{{ homeRoute() }}" style="padding: 0px;">
-                <img src="/images/logo@2x.png" width="220" alt="{{ config('app.name') }}" />
+                <img src="/images/logo@2x.png" width="180" alt="{{ config('app.name') }}" />
             </a>
         </div>
     </div>
