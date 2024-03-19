@@ -41,10 +41,8 @@
 
     <!-- AdminBSB Theme -->
     <link rel="stylesheet" type="text/css" href="{{ asset('css/admin/style.css') }}">
-    <link rel="stylesheet" type="text/css" href="{{ asset('css/admin/font-awesome.min.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('css/admin/custom.css') }}">
 
-    <link rel="stylesheet" type="text/css" href="{{ asset('css/admin/qanto.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('css/admin/custom.css') }}">
     <style>
         .login-page {

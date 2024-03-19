@@ -1,6 +1,5 @@
 <?php
 
-use Illuminate\Routing\Router;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -15,7 +14,7 @@ Route::middleware(['auth', 'role:admin'])->prefix('admin')->name('admin.')->grou
     Route::get('/home', [App\Http\Controllers\Admin\HomeController::class, 'index'])->name('home');
 
     Route::resource('user', App\Http\Controllers\Admin\UserController::class)->except(['show']);
-    Route::prefix('user')->scopeBindings()->name('user.')->group(function (Router $router) {
+    Route::prefix('user')->scopeBindings()->name('user.')->group(function () {
         Route::post('/list', [App\Http\Controllers\Admin\UserController::class, 'list'])->name('list');
         Route::get('/exportToExcel', [App\Http\Controllers\Admin\UserController::class, 'exportToExcel'])->name('exportToExcel');
     });

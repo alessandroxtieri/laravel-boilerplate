@@ -12,8 +12,7 @@ class UserService
     /**
      * Store a new user in the database.
      *
-     * @param  array<string, string>  $userData An associative array containing user data.
-     *
+     * @param  array<string, string>  $userData  An associative array containing user data.
      * @return User The created User model.
      */
     public function storeUser(array $userData): User
@@ -28,8 +27,8 @@ class UserService
     /**
      * Update a user's information.
      *
-     * @param  User  $user The user to be updated.
-     * @param  array<string, string>  $userData An associative array containing the updated user data, including optional password field.
+     * @param  User  $user  The user to be updated.
+     * @param  array<string, string>  $userData  An associative array containing the updated user data, including optional password field.
      */
     public function updateUser(User $user, array $userData): void
     {
@@ -46,7 +45,7 @@ class UserService
     /**
      * Delete a user.
      *
-     * @param  User  $user The user to delete.
+     * @param  User  $user  The user to delete.
      */
     public function deleteUser(User $user): JsonResponse
     {
@@ -61,8 +60,8 @@ class UserService
     /**
      * Assign a role to a user.
      *
-     * @param  User  $user     The user to assign the role to.
-     * @param  string  $roleName The name of the role to assign.
+     * @param  User  $user  The user to assign the role to.
+     * @param  string  $roleName  The name of the role to assign.
      */
     public function assignRoleToUser(User $user, string $roleName): void
     {

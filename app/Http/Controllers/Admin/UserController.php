@@ -24,7 +24,7 @@ class UserController extends AdminController
     /**
      * UserService constructor.
      *
-     * @param  UserService  $userService The UserService instance injected for user-related operations.
+     * @param  UserService  $userService  The UserService instance injected for user-related operations.
      */
     public function __construct(UserService $userService)
     {
@@ -54,7 +54,7 @@ class UserController extends AdminController
 
         return DataTables::of($users)
             ->addColumn('actions', function ($user) {
-                return '<span class="mr-1"><a href="user/' . $user->id . '/edit" data-id="' . $user->id . '" class="btn waves-effect btn-primary"><i class="material-icons">edit</i><span>Modifica</span></a></span>';
+                return '<span class="mr-1"><a href="user/'.$user->id.'/edit" data-id="'.$user->id.'" class="btn waves-effect btn-primary"><i class="material-icons">edit</i><span>Modifica</span></a></span>';
             })
             ->editColumn('rolename', function ($user) {
                 return $user->getRoleName();
@@ -78,8 +78,7 @@ class UserController extends AdminController
     /**
      * Store a newly created user in storage.
      *
-     * @param  UserStoreRequest  $request The validated user store request.
-     *
+     * @param  UserStoreRequest  $request  The validated user store request.
      * @return RedirectResponse A redirect response based on the user's role.
      */
     public function store(UserStoreRequest $request): RedirectResponse
@@ -102,8 +101,7 @@ class UserController extends AdminController
     /**
      * Show the form for editing the specified user.
      *
-     * @param  User  $user The user to edit.
-     *
+     * @param  User  $user  The user to edit.
      * @return View The view displaying the user edit form.
      */
     public function edit(User $user): View
@@ -117,9 +115,8 @@ class UserController extends AdminController
     /**
      * Update the specified user in storage.
      *
-     * @param  UserUpdateRequest  $request The validated user update request.
-     * @param  User  $user The user to update.
-     *
+     * @param  UserUpdateRequest  $request  The validated user update request.
+     * @param  User  $user  The user to update.
      * @return RedirectResponse A redirect response to the user index.
      */
     public function update(UserUpdateRequest $request, User $user): RedirectResponse
@@ -140,8 +137,7 @@ class UserController extends AdminController
     /**
      * Remove the specified user from storage.
      *
-     * @param  User  $user The user to be removed.
-     *
+     * @param  User  $user  The user to be removed.
      * @return JsonResponse A JSON response indicating the result of the user removal.
      */
     public function destroy(User $user): JsonResponse
@@ -156,6 +152,6 @@ class UserController extends AdminController
      */
     public function exportToExcel()
     {
-        return Excel::download(new UsersExport(), time() . '-Utenti.xlsx');
+        return Excel::download(new UsersExport(), time().'-Utenti.xlsx');
     }
 }

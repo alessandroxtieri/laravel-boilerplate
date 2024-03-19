@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
+use App\Models\User;
 use Carbon\Carbon;
 use ESolution\DBEncryption\Encrypter;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
@@ -36,7 +37,10 @@ class LoginController extends Controller
     }
 
     /**
-     * Handle the user login request.
+     * Processes the user login attempt.
+     *
+     * @param  Request  $request  The HTTP request.
+     * @return RedirectResponse The redirection response.
      */
     public function login(Request $request): RedirectResponse
     {
@@ -45,29 +49,72 @@ class LoginController extends Controller
             'password' => 'required',
         ]);
 
-        $credentials = $request->only('email', 'password');
-        $credentials['email'] = Encrypter::encrypt($credentials['email']);
+        $credentials = $this->getEncryptedCredentials($request);
+        $authenticated = $this->attemptLogin($credentials);
 
-        if (Auth::attempt($credentials)) {
-            $url = '/home';
+        if ($authenticated) {
+            $url = $this->getRedirectUrl();
 
-            /** @phpstan-ignore-next-line */
-            switch (Auth::user()->roles()->first()->name) {
-                case 'admin':
-                    $url = '/admin/home';
-                    break;
-                case 'customer':
-                    $url = '/customer/home';
-                    break;
-            }
-
-            /** @phpstan-ignore-next-line */
-            Auth::user()->last_login = Carbon::now();
-            Auth::user()->save();
+            $this->updateLastLogin(Auth::user());
 
             return redirect($url);
         }
 
-        return redirect('login')->withErrors('Email o password errati.');
+        return redirect('login')->withErrors('Incorrect email or password.');
+    }
+
+    /**
+     * Retrieves the user credentials encrypting the email.
+     *
+     * @param  Request  $request  The HTTP request.
+     * @return array The encrypted credentials.
+     */
+    private function getEncryptedCredentials(Request $request): array
+    {
+        $credentials = $request->only('email', 'password');
+        $credentials['email'] = Encrypter::encrypt($credentials['email']);
+
+        return $credentials;
+    }
+
+    /**
+     * Attempts user login.
+     *
+     * @param  array  $credentials  The user credentials.
+     * @return bool True if login is successful, false otherwise.
+     */
+    private function attemptLogin(array $credentials): bool
+    {
+        return Auth::attempt($credentials);
+    }
+
+    /**
+     * Gets the redirection URL based on user's role.
+     *
+     * @return string The redirection URL.
+     */
+    private function getRedirectUrl(): string
+    {
+        $role = Auth::user()->roles()->first()->name ?? '';
+
+        switch ($role) {
+            case 'admin':
+                return '/admin/home';
+            case 'customer':
+                return '/customer/home';
+            default:
+                return '/home';
+        }
+    }
+
+    /**
+     * Updates the user's last login timestamp.
+     *
+     * @param  User  $user  The user to update last login for.
+     */
+    private function updateLastLogin(User $user): void
+    {
+        $user->last_login = Carbon::now();
+        $user->save();
     }
 }

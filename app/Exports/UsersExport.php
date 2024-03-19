@@ -42,8 +42,7 @@ class UsersExport implements FromCollection, ShouldAutoSize, WithColumnFormattin
     /**
      * Map the user data to an array for export.
      *
-     * @param $user The user object to be mapped.
-     *
+     * @param  $user  The user object to be mapped.
      * @return array An array representing the user data for export.
      */
     public function map($user): array

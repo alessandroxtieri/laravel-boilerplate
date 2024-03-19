@@ -9,7 +9,7 @@ use Spatie\Permission\Traits\HasRoles;
 
 class User extends Authenticatable
 {
-    use HasFactory, HasRoles, EncryptedAttribute;
+    use EncryptedAttribute, HasFactory, HasRoles;
 
     /**
      * The attributes that are mass assignable.
@@ -93,22 +93,6 @@ class User extends Authenticatable
     }
 
     /**
-     * Get the attributes that should be cast.
-     *
-     * @return array<string, string>
-     */
-    protected function casts(): array
-    {
-        return [
-            'name' => 'string',
-            'email' => 'string',
-            'password' => 'hashed',
-            'last_login' => 'datetime',
-            'status' => 'boolean',
-        ];
-    }
-
-    /**
      * Boot the User model and set up event listeners for creating, updating, and deleting actions.
      *
      * This method registers event listeners to log activities related to user records, such as creation, updating, and deletion.
@@ -142,5 +126,21 @@ class User extends Authenticatable
         self::deleted(function () {
             //Log::info('User deleted');
         });
+    }
+
+    /**
+     * Get the attributes that should be cast.
+     *
+     * @return array<string, string>
+     */
+    protected function casts(): array
+    {
+        return [
+            'name' => 'string',
+            'email' => 'string',
+            'password' => 'hashed',
+            'last_login' => 'datetime',
+            'status' => 'boolean',
+        ];
     }
 }
