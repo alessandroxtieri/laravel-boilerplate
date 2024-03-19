@@ -9,6 +9,7 @@ use App\Models\User;
 use App\Services\UserService;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\RedirectResponse;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\View\View;
 use Maatwebsite\Excel\Facades\Excel;
@@ -54,7 +55,14 @@ class UserController extends AdminController
 
         return DataTables::of($users)
             ->addColumn('actions', function ($user) {
-                return '<span class="mr-1"><a href="user/'.$user->id.'/edit" data-id="'.$user->id.'" class="btn waves-effect btn-primary"><i class="material-icons">edit</i><span>Modifica</span></a></span>';
+                $buttons = '<span class="mr-1"><a href="user/' . $user->id . '/edit" data-id="' . $user->id . '" class="btn waves-effect btn-primary"><i class="material-icons">edit</i></a></span>';
+
+                /** @phpstan-ignore-next-line */
+                if (Auth::user()->id !== $user->id) {
+                    $buttons .= '<span class="mr-1"><button id="' . $user->id . '" class="btn waves-effect btn-danger btn-delete"><i class="material-icons">delete</i></button></span>';
+                }
+
+                return $buttons;
             })
             ->editColumn('rolename', function ($user) {
                 return $user->getRoleName();
@@ -156,6 +164,6 @@ class UserController extends AdminController
      */
     public function exportToExcel()
     {
-        return Excel::download(new UsersExport(), time().'-Utenti.xlsx');
+        return Excel::download(new UsersExport(), time() . '-Utenti.xlsx');
     }
 }

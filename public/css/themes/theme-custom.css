@@ -1,69 +1,94 @@
 ﻿.theme-white .navbar {
-  background-color:rgb(255, 255, 255); }
+    background-color: rgb(255, 255, 255);
+}
 
 .theme-white .navbar-brand {
-  color: #607D8B; }
-  .theme-white .navbar-brand:hover {
-    color: #607D8B; }
-  .theme-white .navbar-brand:active {
-    color: #607D8B; }
-  .theme-white .navbar-brand:focus {
-    color: #607D8B; }
+    color: #607D8B;
+}
 
-.theme-white .nav > li > a {
-  color: #607D8B; }
-  .theme-white .nav > li > a:hover {
-    background-color: transparent; }
-  .theme-white .nav > li > a:focus {
-    background-color: transparent; }
+.theme-white .navbar-brand:hover {
+    color: #607D8B;
+}
 
-.theme-white .nav .open > a {
-  background-color: transparent; }
-  .theme-white .nav .open > a:hover {
-    background-color: transparent; }
-  .theme-white .nav .open > a:focus {
-    background-color: transparent; }
+.theme-white .navbar-brand:active {
+    color: #607D8B;
+}
+
+.theme-white .navbar-brand:focus {
+    color: #607D8B;
+}
+
+.theme-white .nav>li>a {
+    color: #607D8B;
+}
+
+.theme-white .nav>li>a:hover {
+    background-color: transparent;
+}
+
+.theme-white .nav>li>a:focus {
+    background-color: transparent;
+}
+
+.theme-white .nav .open>a {
+    background-color: transparent;
+}
+
+.theme-white .nav .open>a:hover {
+    background-color: transparent;
+}
+
+.theme-white .nav .open>a:focus {
+    background-color: transparent;
+}
 
 .theme-white .bars {
-  color: #607D8B; }
+    color: #607D8B;
+}
 
 .theme-white .sidebar .menu .list li.active {
-  background-color: transparent; }
+    background-color: transparent;
+}
 
-  .theme-white .sidebar .menu .list li.active > :first-child i, .theme-white .sidebar .menu .list li.active > :first-child span {
-    color: #607D8B; }
+.theme-white .sidebar .menu .list li.active> :first-child i,
+.theme-white .sidebar .menu .list li.active> :first-child span {
+    color: #607D8B;
+}
 
 .theme-white .sidebar .menu .list .toggled {
-  background-color: transparent; }
+    background-color: transparent;
+}
 
 .theme-white .sidebar .menu .list .ml-menu {
-  background-color: transparent; }
+    background-color: transparent;
+}
 
 .theme-white .sidebar .legal {
-  background-color: #fff; }
+    background-color: #fff;
+}
 
 .theme-white .sidebar .legal .copyright a {
-  color: #607D8B !important; }
+    color: #607D8B !important;
+}
 
 .sidebar .user-info {
     background-image: none !important;
-    background-color:#fff;
-  }
-  
+    background-color: #fff;
+}
+
 .sidebar .user-info .info-container .name,
 .sidebar .user-info .info-container .email,
-.sidebar .user-info .info-container .user-helper-dropdown
-{
+.sidebar .user-info .info-container .user-helper-dropdown {
     color: black;
 }
 
 .label-count {
-  color: #fff;
+    color: #fff;
 }
 
 .sidebar .user-info .info-container .name,
 .sidebar .user-info .info-container .email {
-  color: #000; 
+    color: #000;
 }
 
 .mb-0 {
@@ -262,7 +287,7 @@
     padding-left: 30px !important;
 }
 
-/** 
+/**
  * Vari fix
  */
 
@@ -275,10 +300,6 @@
     font-weight: normal !important;
 }
 
-.sa-button-container button {
-    border-radius: 5px !important;
-    min-height: 38px;
-}
 
 /* Table */
 .no-border {
@@ -286,9 +307,9 @@
 }
 
 /* Bottoni azione */
-.btn.btn-small.btn-action { 
-    margin-right: 2%; 
-    min-width: 30%; 
+.btn.btn-small.btn-action {
+    margin-right: 2%;
+    min-width: 30%;
 }
 
 .btn.btn-lg {
@@ -344,8 +365,8 @@ div.dataTables_wrapper div.dataTables_filter label {
     overflow: hidden !important;
 }
 
-/** 
- * Card Collassabile 
+/**
+ * Card Collassabile
  * TODO: Servirebbe una piccola animazione per lo sliding
  */
 
@@ -362,12 +383,12 @@ div.dataTables_wrapper div.dataTables_filter label {
 }
 
 /* Dimensione menù azioni */
-.open > .dropdown-menu {
+.open>.dropdown-menu {
     min-width: 190px;
 }
 
 /* Cards */
-.card .header h2 > i {
+.card .header h2>i {
     position: relative;
     top: 5px;
     margin-right: 5px;
@@ -375,7 +396,7 @@ div.dataTables_wrapper div.dataTables_filter label {
 }
 
 span.required {
-    color:#f00;
+    color: #f00;
     margin-left: 5px;
 }
 
@@ -383,52 +404,32 @@ span.required {
  * Stile arrotondato
  */
 
-/* Card e tabelle */
- .table,
- .card {
-     border-radius: 10px;
- }
 
 .profile-header {
     border-top-left-radius: 10px;
-    border-top-right-radius: 10px; 
-}
-
- /* Bottoni */
-.btn:not(.btn-link):not(.btn-circle) {
-    border-radius: 5px;
+    border-top-right-radius: 10px;
 }
 
 /* Dropdown menù */
 
-.open > .dropdown-menu {
-    padding: 5px; 
-}
-
-ul.dropdown-menu {
-    border-radius: 8px;   
-}
-
-ul.dropdown-menu > li > a:hover{
-    border-radius: 5px;   
+.open>.dropdown-menu {
+    padding: 5px;
 }
 
 /* lsidebar */
 
 .sidebar .menu .list {
-    padding: 5px;   
+    padding: 5px;
 }
 
 .sidebar .menu .list .header {
-    border-radius: 5px;
     margin-bottom: 5px;
 }
 
-.sidebar .menu .list a:hover, 
-.sidebar .menu .list a:active, 
+.sidebar .menu .list a:hover,
+.sidebar .menu .list a:active,
 .sidebar .menu .list a:focus {
     background-color: #eee !important;
-    border-radius: 5px;
 }
 
 /* / Stile arrotondato */
