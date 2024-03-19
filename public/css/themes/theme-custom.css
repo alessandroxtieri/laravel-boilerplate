@@ -1,0 +1,434 @@
+﻿.theme-white .navbar {
+  background-color:rgb(255, 255, 255); }
+
+.theme-white .navbar-brand {
+  color: #607D8B; }
+  .theme-white .navbar-brand:hover {
+    color: #607D8B; }
+  .theme-white .navbar-brand:active {
+    color: #607D8B; }
+  .theme-white .navbar-brand:focus {
+    color: #607D8B; }
+
+.theme-white .nav > li > a {
+  color: #607D8B; }
+  .theme-white .nav > li > a:hover {
+    background-color: transparent; }
+  .theme-white .nav > li > a:focus {
+    background-color: transparent; }
+
+.theme-white .nav .open > a {
+  background-color: transparent; }
+  .theme-white .nav .open > a:hover {
+    background-color: transparent; }
+  .theme-white .nav .open > a:focus {
+    background-color: transparent; }
+
+.theme-white .bars {
+  color: #607D8B; }
+
+.theme-white .sidebar .menu .list li.active {
+  background-color: transparent; }
+
+  .theme-white .sidebar .menu .list li.active > :first-child i, .theme-white .sidebar .menu .list li.active > :first-child span {
+    color: #607D8B; }
+
+.theme-white .sidebar .menu .list .toggled {
+  background-color: transparent; }
+
+.theme-white .sidebar .menu .list .ml-menu {
+  background-color: transparent; }
+
+.theme-white .sidebar .legal {
+  background-color: #fff; }
+
+.theme-white .sidebar .legal .copyright a {
+  color: #607D8B !important; }
+
+.sidebar .user-info {
+    background-image: none !important;
+    background-color:#fff;
+  }
+  
+.sidebar .user-info .info-container .name,
+.sidebar .user-info .info-container .email,
+.sidebar .user-info .info-container .user-helper-dropdown
+{
+    color: black;
+}
+
+.label-count {
+  color: #fff;
+}
+
+.sidebar .user-info .info-container .name,
+.sidebar .user-info .info-container .email {
+  color: #000; 
+}
+
+.mb-0 {
+    margin-bottom: 0px !important;
+}
+
+.mb-1 {
+    margin-bottom: 10px !important;
+}
+
+.mb-2 {
+    margin-bottom: 20px !important;
+}
+
+.mb-3 {
+    margin-bottom: 30px !important;
+}
+
+.mb-4 {
+    margin-bottom: 40px !important;
+}
+
+.mb-5 {
+    margin-bottom: 50px !important;
+}
+
+.mt-0 {
+    margin-top: 0px !important;
+}
+
+.mt-07 {
+    margin-top: 7px !important;
+}
+
+.mt-1 {
+    margin-top: 10px !important;
+}
+
+.mt-2 {
+    margin-top: 20px !important;
+}
+
+.mt-2-3 {
+    margin-top: 25px !important;
+}
+
+.mt-3 {
+    margin-top: 30px !important;
+}
+
+.mt-4 {
+    margin-top: 40px !important;
+}
+
+.mt-5 {
+    margin-top: 50px !important;
+}
+
+.ml-0 {
+    margin-left: 0px !important;
+}
+
+.ml-1 {
+    margin-left: 10px !important;
+}
+
+.ml-1-2 {
+    margin-left: 15px !important;
+}
+
+.ml-2 {
+    margin-left: 20px !important;
+}
+
+.ml-3 {
+    margin-left: 30px !important;
+}
+
+.ml-4 {
+    margin-left: 40px !important;
+}
+
+.ml-5 {
+    margin-left: 50px !important;
+}
+
+.ml-6 {
+    margin-left: 60px !important;
+}
+
+.mr-0 {
+    margin-right: 0px !important;
+}
+
+.mr-1 {
+    margin-right: 10px !important;
+}
+
+.mr-2 {
+    margin-right: 20px !important;
+}
+
+.mr-3 {
+    margin-right: 30px !important;
+}
+
+.mr-4 {
+    margin-right: 40px !important;
+}
+
+.p-0 {
+    padding-left: 0px !important;
+}
+
+.pb-0 {
+    padding-bottom: 0px !important;
+}
+
+.pb-1 {
+    padding-bottom: 10px !important;
+}
+
+.pb-2 {
+    padding-bottom: 20px !important;
+}
+
+.pb-3 {
+    padding-bottom: 30px !important;
+}
+
+.pb-4 {
+    padding-bottom: 40px !important;
+}
+
+.pb-5 {
+    padding-bottom: 50px !important;
+}
+
+.pt-1 {
+    padding-top: 10px !important;
+}
+
+.pl-0 {
+    padding-left: 0px !important;
+}
+
+.pl-1 {
+    padding-left: 10px !important;
+}
+
+.pl-1-2 {
+    padding-left: 15px !important;
+}
+
+.pl-2 {
+    padding-left: 20px !important;
+}
+
+.pl-3 {
+    padding-left: 30px !important;
+}
+
+.pr-0 {
+    padding-right: 0px !important;
+}
+
+.pr-1 {
+    padding-right: 10px !important;
+}
+
+.pr-1-2 {
+    padding-right: 15px !important;
+}
+
+.pr-2 {
+    padding-right: 20px !important;
+}
+
+.pr-3 {
+    padding-right: 30px !important;
+}
+
+.w-a {
+    width: auto !important;
+}
+
+.h-a {
+    height: auto !important;
+}
+
+.h-5 {
+    height: 50px !important;
+}
+
+.pl-3 {
+    padding-left: 30px !important;
+}
+
+/** 
+ * Vari fix
+ */
+
+.none {
+    display: none !important;
+}
+
+/* Sweet alert */
+.sweet-alert p {
+    font-weight: normal !important;
+}
+
+.sa-button-container button {
+    border-radius: 5px !important;
+    min-height: 38px;
+}
+
+/* Table */
+.no-border {
+    border: 0px solid black !important;
+}
+
+/* Bottoni azione */
+.btn.btn-small.btn-action { 
+    margin-right: 2%; 
+    min-width: 30%; 
+}
+
+.btn.btn-lg {
+    min-width: 195px;
+}
+
+i.help-icon {
+    font-size: 18px;
+    cursor: help;
+}
+
+/* Menu */
+ul.menu {
+    list-style: none;
+}
+
+.navbar>.container .navbar-brand,
+.navbar>.container-fluid .navbar-brand {
+    margin-left: 30px;
+}
+
+/* Sidebar */
+.sidebar .user-info .info-container {
+    top: 10px;
+}
+
+.info-container span.name,
+.info-container span.username,
+.info-container span.role {
+    font-weight: bold;
+}
+
+.dataTables_filter {
+    display: block;
+}
+
+input.form-control.input-sm {
+    max-width: inherit;
+}
+
+/* sovrascrivo la larghezza massima degli switch */
+.demo-switch .switch {
+    min-width: 70px;
+}
+
+.form-line.errored,
+.form-group .form-line.errored:after {
+    border-bottom: 2px solid #ff0000;
+}
+
+/* impedisce al campo di ricerca di sforare dal suo contenitore */
+div.dataTables_wrapper div.dataTables_filter label {
+    overflow: hidden !important;
+}
+
+/** 
+ * Card Collassabile 
+ * TODO: Servirebbe una piccola animazione per lo sliding
+ */
+
+.card.card-collapsable .body {
+    display: none;
+}
+
+.card.card-collapsable .body.open {
+    display: block;
+}
+
+.collapsable-handler {
+    cursor: pointer;
+}
+
+/* Dimensione menù azioni */
+.open > .dropdown-menu {
+    min-width: 190px;
+}
+
+/* Cards */
+.card .header h2 > i {
+    position: relative;
+    top: 5px;
+    margin-right: 5px;
+    color: #444;
+}
+
+span.required {
+    color:#f00;
+    margin-left: 5px;
+}
+
+/**
+ * Stile arrotondato
+ */
+
+/* Card e tabelle */
+ .table,
+ .card {
+     border-radius: 10px;
+ }
+
+.profile-header {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px; 
+}
+
+ /* Bottoni */
+.btn:not(.btn-link):not(.btn-circle) {
+    border-radius: 5px;
+}
+
+/* Dropdown menù */
+
+.open > .dropdown-menu {
+    padding: 5px; 
+}
+
+ul.dropdown-menu {
+    border-radius: 8px;   
+}
+
+ul.dropdown-menu > li > a:hover{
+    border-radius: 5px;   
+}
+
+/* lsidebar */
+
+.sidebar .menu .list {
+    padding: 5px;   
+}
+
+.sidebar .menu .list .header {
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+
+.sidebar .menu .list a:hover, 
+.sidebar .menu .list a:active, 
+.sidebar .menu .list a:focus {
+    background-color: #eee !important;
+    border-radius: 5px;
+}
+
+/* / Stile arrotondato */

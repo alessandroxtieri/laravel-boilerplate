@@ -1,0 +1,11 @@
+﻿/**
+ * Codice CSS custom del progetto 
+ */
+
+ .bootstrap-select .bs-searchbox .form-control, .bootstrap-select .bs-actionsbox .form-control, .bootstrap-select .bs-donebutton .form-control {
+    margin-left: 0px;
+}
+
+.bootstrap-select .bs-searchbox:after {
+    content: '';
+}
