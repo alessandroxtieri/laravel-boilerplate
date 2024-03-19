@@ -34,7 +34,7 @@
                 <li
                     class="{{ appSectionName(0) }} {{ appSectionName(1) }} {{ isSectionActive(['user'], 1) ? 'active' : '' }}">
                     <a href="{{ route('admin.user.index') }}">
-                        <i class="material-icons">account_circle</i>
+                        <i class="material-icons">people</i>
                         <span>Utenti</span>
                     </a>
                 </li>

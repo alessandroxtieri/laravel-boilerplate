@@ -60,8 +60,8 @@ class User extends Authenticatable
      * @var array<int, string>
      */
     protected static $statuses = [
-        0 => 'Attivo',
-        1 => 'Disattivo',
+        1 => 'Attivo',
+        0 => 'Disattivo',
     ];
 
     /**

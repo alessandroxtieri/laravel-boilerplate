@@ -61,7 +61,7 @@ class LoginController extends Controller
             return redirect($url);
         }
 
-        return redirect('login')->withErrors('Incorrect email or password.');
+        return redirect('login')->withErrors('Email o password errati.');
     }
 
     /**

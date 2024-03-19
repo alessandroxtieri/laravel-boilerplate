@@ -6,7 +6,7 @@
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                 <div class="card">
                     <div class="header">
-                        <h2><i class="material-icons">people</i>Elenco degli utenti</h2>
+                        <h2><i class="material-icons">list</i>Elenco degli utenti</h2>
                         <ul class="header-dropdown m-r--5">
                             <li class="dropdown">
                                 <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button"
@@ -88,10 +88,10 @@
                         searchable: false
                     },
                     {
-                        data: 'is_disabled',
-                        searchable: false,
+                        data: 'status',
+                        searchable: true,
                         render: function(data, type, row) {
-                            return data ? "Disabilitato" : "Abilitato";
+                            return data ? "Abilitato" : "Disabilitato";
                         }
                     },
                     {

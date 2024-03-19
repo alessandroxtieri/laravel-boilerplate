@@ -56,7 +56,7 @@ class UserUpdateRequest extends FormRequest
                 },
             ],
             'password' => 'nullable|sometimes|string|min:6',
-            'is_disabled' => 'required|boolean',
+            'status' => 'required|boolean',
         ];
     }
 
@@ -78,6 +78,8 @@ class UserUpdateRequest extends FormRequest
 
             'password.string' => 'Il campo "Password" deve essere una stringa.',
             'password.min' => 'Il campo "Password" deve essere lungo almeno :min caratteri.',
+
+            'status.required' => 'Il campo "Stato" è obbligatorio.',
         ];
     }
 }

@@ -84,8 +84,8 @@
                                     <div class="row clearfix">
                                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                             <div class="form-line">
-                                                <x-admin.select :name="'is_disabled'" :options="$status" :label="'Stato'"
-                                                    :description="'Stato dell utente'" :check="old('role') ?? $user->is_disabled" :required="true"
+                                                <x-admin.select :name="'status'" :options="$status" :label="'Stato'"
+                                                    :description="'Stato dell utente'" :check="old('status') ?? $user->status" :required="true"
                                                     :disabled="$user->id == Auth::user()->id ? true : false" />
                                             </div>
                                         </div>
