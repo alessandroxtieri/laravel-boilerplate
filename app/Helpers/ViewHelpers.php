@@ -34,7 +34,6 @@ function homeRoute()
  *
  * @param  array<string, string>  $list  An array of section names to check for activity.
  * @param  int  $segment  (Optional) An optional segment used to generate the section name.
- *
  * @return bool Returns true if any section in the list is active, false otherwise.
  */
 function isSectionActive(array $list, $segment = 0): bool
@@ -52,7 +51,6 @@ function isSectionActive(array $list, $segment = 0): bool
  * Generate a user-readable application section name.
  *
  * @param  int  $segment  (Optional) An optional segment used to generate the section name.
- *
  * @return string The user-readable section name.
  */
 function userReadableAppSectionName($segment = 0): string
@@ -66,7 +64,6 @@ function userReadableAppSectionName($segment = 0): string
  * Get the name of a specific segment from the request's URL segments.
  *
  * @param  int  $segment  (Optional) The segment number to retrieve (default is 0).
- *
  * @return string|null The name of the specified segment or the previous segment if not found.
  */
 function appSectionName($segment = 0): ?string

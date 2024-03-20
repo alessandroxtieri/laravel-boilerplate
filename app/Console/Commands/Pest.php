@@ -24,7 +24,7 @@ class Pest extends Command
     /**
      * Execute the console command.
      */
-    public function handle()
+    public function handle(): void
     {
         $process = Process::run('./vendor/bin/pest');
 

@@ -40,7 +40,6 @@ class LoginController extends Controller
      * Processes the user login attempt.
      *
      * @param  Request  $request  The HTTP request.
-     *
      * @return RedirectResponse The redirection response.
      */
     public function login(Request $request): RedirectResponse
@@ -68,8 +67,7 @@ class LoginController extends Controller
      * Retrieves the user credentials encrypting the email.
      *
      * @param  Request  $request  The HTTP request.
-     *
-     * @return array The encrypted credentials.
+     * @return array<int, string> The encrypted credentials.
      */
     private function getEncryptedCredentials(Request $request): array
     {
@@ -82,8 +80,7 @@ class LoginController extends Controller
     /**
      * Attempts user login.
      *
-     * @param  array  $credentials  The user credentials.
-     *
+     * @param  array<int, string>  $credentials  The user credentials.
      * @return bool True if login is successful, false otherwise.
      */
     private function attemptLogin(array $credentials): bool

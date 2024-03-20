@@ -37,7 +37,7 @@ class User extends Authenticatable
     /**
      * The attributes that should be encrypted/decrypted.
      *
-     * @var array
+     * @var array<int, string>
      */
     protected $encryptable = [
         'name',

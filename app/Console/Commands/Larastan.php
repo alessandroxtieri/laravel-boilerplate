@@ -21,7 +21,10 @@ class Larastan extends Command
      */
     protected $description = 'Static analysis of the code';
 
-    public function handle()
+    /**
+     * Execute the console command.
+     */
+    public function handle(): void
     {
         $process = Process::run('./vendor/bin/phpstan analyse');
 

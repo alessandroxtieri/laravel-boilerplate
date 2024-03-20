@@ -15,7 +15,7 @@ class StatusMiddleware
      */
     public function handle(Request $request, Closure $next): Response
     {
-        if (auth()->check() && !auth()->user()->status) {
+        if (auth()->check() && ! auth()->user()->status) {
             auth()->logout();
 
             return redirect('login')->withErrors(['disabled' => 'Il tuo account è stato disabilitato.']);
